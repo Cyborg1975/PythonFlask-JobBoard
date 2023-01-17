@@ -15,6 +15,10 @@ def open_connection():
     return connection
 
 
+def execute_sq1():
+    connection = open_connection()
+
+
 @app.route("/")
 @app.route("/jobs")
 def jobs():
