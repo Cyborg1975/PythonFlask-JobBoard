@@ -44,5 +44,6 @@ def jobs():
     return render_template('index.html', jobs=jobs)
 
 
-def job():
+@app.route("/job/<job_id>")
+def job(job_id):
     return render_template("job.html")
