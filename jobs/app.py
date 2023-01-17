@@ -15,7 +15,7 @@ def open_connection():
     return connection
 
 
-def execute_sq1():
+def execute_sql():
     connection = open_connection()
 
 
