@@ -42,3 +42,7 @@ def jobs():
                        'FROM job JOIN employer ON employer.id = job.employer_id')
 
     return render_template('index.html', jobs=jobs)
+
+
+def job():
+    return render_template("job.html")
