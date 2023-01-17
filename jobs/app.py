@@ -20,9 +20,12 @@ def execute_sql(sql, values=(), commit=False, single=False):
     cursor = connection.execute(sql, values)
     if commit is True:
         results = connection.commit()
+
     else:
         results = cursor.fetchone() if single else cursor.fetchall()
-        return results
+
+    cursor.close()
+    return results
 
 
 @app.route("/")
